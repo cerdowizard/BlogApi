@@ -8,6 +8,8 @@ import Auth from './Routes/AuthRoute.js'
 
 import user from './Routes/UserRoute.js'
 
+import cat from './Routes/CategoryRout.js'
+
 import './dataBaseConfig.js'
 
 import post from './Routes/PostRoute.js'
@@ -30,6 +32,9 @@ app.use('/api', Auth)
 app.use('/api', user)
 
 app.use('/api', post)
+
+app.use('/api', cat)
+
 const port = 5010
 app.get('/', (req, res) =>{
     res.json({msg:`Welcome to the blog`})
